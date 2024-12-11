@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="directed">
+    <node id="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" />
+    <node id="detect,os" />
+    <node id="get,sys-utils-cm" />
+    <node id="get,python" />
+    <node id="get,mlcommons,inference,src" />
+    <node id="get-mlperf-inference-utils,e341e5f86d8342e5" />
+    <node id="get,mlperf,inference,src" />
+    <node id="get,mlperf,inference,utils" />
+    <node id="get,dataset-aux,imagenet-aux" />
+    <node id="get-cuda-devices,7a3ede4d3558427a ( with-pycuda )" />
+    <node id="get,cuda,_toolkit" />
+    <node id="get,python3" />
+    <node id="get-generic-python-lib,94b62a682bc44791 ( package.pycuda )" />
+    <node id="get,generic-python-lib,_package.pycuda" />
+    <node id="get-generic-python-lib,94b62a682bc44791 ( package.numpy )" />
+    <node id="get,generic-python-lib,_package.numpy" />
+    <node id="get,cuda-devices,_with-pycuda" />
+    <node id="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" />
+    <node id="detect-cpu,586c8a43320142f7" />
+    <node id="detect,cpu" />
+    <node id="get,mlperf,inference,nvidia,scratch,space" />
+    <node id="get-generic-python-lib,94b62a682bc44791 ( mlperf_logging )" />
+    <node id="get,generic-python-lib,_mlperf_logging" />
+    <node id="get,dataset,original,imagenet,_full" />
+    <node id="get,ml-model,resnet50,_fp32,_onnx,_opset-8" />
+    <node id="get,nvidia,mlperf,inference,common-code,_mlcommons" />
+    <node id="generate-mlperf-inference-user-conf,3af4475745964b93" />
+    <node id="get-mlperf-inference-sut-configs,c2fbf72009e2445b" />
+    <node id="get,cache,dir,_name.mlperf-inference-sut-configs" />
+    <node id="get,sut,configs" />
+    <node id="generate,user-conf,mlperf,inference" />
+    <node id="get,nvidia,mitten" />
+    <node id="get,cuda,_cudnn" />
+    <node id="get,tensorrt" />
+    <node id="build,nvidia,inference,server,_mlcommons" />
+    <node id="reproduce,mlperf,inference,nvidia,harness,_build_engine,_tensorrt,_cuda,_singlestream,_resnet50,_batch_size.1,_v4.1-dev" />
+    <node id="reproduce,mlperf,inference,nvidia,harness,_preprocess_data,_tensorrt,_cuda,_resnet50,_v4.1-dev" />
+    <node id="get-generic-python-lib,94b62a682bc44791 ( onnx-graphsurgeon )" />
+    <node id="get,generic-python-lib,_onnx-graphsurgeon" />
+    <node id="get-generic-python-lib,94b62a682bc44791 ( package.onnx )" />
+    <node id="get,generic-python-lib,_package.onnx" />
+    <node id="benchmark-program,19f369ef47084895" />
+    <node id="benchmark-program-mlperf,cfff0132a8aa4018" />
+    <node id="benchmark-program,program" />
+    <node id="benchmark-mlperf" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="detect,os" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,sys-utils-cm" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,python" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,mlcommons,inference,src" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,mlperf,inference,utils" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,dataset-aux,imagenet-aux" />
+    <edge source="app-mlperf-inference,d775cac873ee4231 ( nvidia,_resnet50,_tensorrt,_cuda,_valid,_r4.1-dev_default,_singlestream )" target="get,cuda-devices,_with-pycuda" />
+    <edge source="get-mlperf-inference-utils,e341e5f86d8342e5" target="get,mlperf,inference,src" />
+    <edge source="get-cuda-devices,7a3ede4d3558427a ( with-pycuda )" target="get,cuda,_toolkit" />
+    <edge source="get-cuda-devices,7a3ede4d3558427a ( with-pycuda )" target="get,python3" />
+    <edge source="get-cuda-devices,7a3ede4d3558427a ( with-pycuda )" target="get,generic-python-lib,_package.pycuda" />
+    <edge source="get-cuda-devices,7a3ede4d3558427a ( with-pycuda )" target="get,generic-python-lib,_package.numpy" />
+    <edge source="get-generic-python-lib,94b62a682bc44791 ( package.pycuda )" target="get,python3" />
+    <edge source="get-generic-python-lib,94b62a682bc44791 ( package.numpy )" target="get,python3" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="detect,os" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="detect,cpu" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,sys-utils-cm" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,mlperf,inference,nvidia,scratch,space" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,generic-python-lib,_mlperf_logging" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,dataset,original,imagenet,_full" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,ml-model,resnet50,_fp32,_onnx,_opset-8" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,mlcommons,inference,src" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,nvidia,mlperf,inference,common-code,_mlcommons" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="generate,user-conf,mlperf,inference" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,generic-python-lib,_package.pycuda" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,nvidia,mitten" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,cuda,_cudnn" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,tensorrt" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="build,nvidia,inference,server,_mlcommons" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="reproduce,mlperf,inference,nvidia,harness,_build_engine,_tensorrt,_cuda,_singlestream,_resnet50,_batch_size.1,_v4.1-dev" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="reproduce,mlperf,inference,nvidia,harness,_preprocess_data,_tensorrt,_cuda,_resnet50,_v4.1-dev" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,generic-python-lib,_onnx-graphsurgeon" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="get,generic-python-lib,_package.onnx" />
+    <edge source="app-mlperf-inference-nvidia,bc3b17fb430f4732 ( run_harness,_tensorrt,_cuda,_singlestream,_resnet50,_gpu_memory.8 )" target="benchmark-mlperf" />
+    <edge source="detect-cpu,586c8a43320142f7" target="detect,os" />
+    <edge source="get-generic-python-lib,94b62a682bc44791 ( mlperf_logging )" target="get,python3" />
+    <edge source="generate-mlperf-inference-user-conf,3af4475745964b93" target="detect,os" />
+    <edge source="generate-mlperf-inference-user-conf,3af4475745964b93" target="detect,cpu" />
+    <edge source="generate-mlperf-inference-user-conf,3af4475745964b93" target="get,python" />
+    <edge source="generate-mlperf-inference-user-conf,3af4475745964b93" target="get,mlcommons,inference,src" />
+    <edge source="generate-mlperf-inference-user-conf,3af4475745964b93" target="get,sut,configs" />
+    <edge source="get-mlperf-inference-sut-configs,c2fbf72009e2445b" target="get,cache,dir,_name.mlperf-inference-sut-configs" />
+    <edge source="get-generic-python-lib,94b62a682bc44791 ( onnx-graphsurgeon )" target="get,python3" />
+    <edge source="get-generic-python-lib,94b62a682bc44791 ( package.onnx )" target="get,python3" />
+    <edge source="benchmark-program,19f369ef47084895" target="detect,cpu" />
+    <edge source="benchmark-program-mlperf,cfff0132a8aa4018" target="benchmark-program,program" />
+  </graph>
+</graphml>

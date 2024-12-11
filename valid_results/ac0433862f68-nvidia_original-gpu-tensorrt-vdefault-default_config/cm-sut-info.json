@@ -1,0 +1,7 @@
+{
+  "system_name": "ac0433862f68",
+  "implementation": "nvidia",
+  "device": "gpu",
+  "framework": "TensorRT",
+  "run_config": "default_config"
+}

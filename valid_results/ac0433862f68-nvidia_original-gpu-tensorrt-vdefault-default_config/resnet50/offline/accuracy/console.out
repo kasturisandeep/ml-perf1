@@ -1,0 +1,88 @@
+[2024-12-11 07:11:58,074 main.py:229 INFO] Detected system ID: KnownSystem.ac0433862f68
+[2024-12-11 07:11:58,344 generate_conf_files.py:107 INFO] Generated measurements/ entries for ac0433862f68_TRT/resnet50/Offline
+[2024-12-11 07:11:58,345 __init__.py:46 INFO] Running command: ./build/bin/harness_default --logfile_outdir="/root/CM/repos/local/cache/4dc132eafa554c94/valid_results/ac0433862f68-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/offline/accuracy" --logfile_prefix="mlperf_log_" --performance_sample_count=2048 --test_mode="AccuracyOnly" --gpu_res2res3_loop_count=1 --gpu_copy_streams=4 --gpu_inference_streams=1 --run_infer_on_copy_streams=false --use_deque_limit=true --gpu_batch_size=64 --map_path="data_maps/imagenet/val_map.txt" --mlperf_conf_path="/root/CM/repos/local/cache/d1b021ecc6ee4dcd/inference/mlperf.conf" --tensor_path="build/preprocessed_data/imagenet/ResNet50/int8_linear" --use_graphs=false --user_conf_path="/root/CM/repos/mlcommons@cm4mlops/script/generate-mlperf-inference-user-conf/tmp/31a4eed87f7844278247210f338eea90.conf" --gpu_engines="./build/engines/ac0433862f68/resnet50/Offline/resnet50-Offline-gpu-b64-int8.lwis_k_99_MaxP.plan" --max_dlas=0 --scenario Offline --model resnet50
+[2024-12-11 07:11:58,345 __init__.py:53 INFO] Overriding Environment
+benchmark : Benchmark.ResNet50
+buffer_manager_thread_count : 0
+data_dir : /root/CM/repos/local/cache/33b43f4d63904585/data
+gpu_batch_size : 64
+gpu_copy_streams : 4
+gpu_inference_streams : 1
+gpu_res2res3_loop_count : 1
+input_dtype : int8
+input_format : linear
+log_dir : /root/CM/repos/local/cache/10ef2dda136f4a86/repo/closed/NVIDIA/build/logs/2024.12.11-07.11.57
+map_path : data_maps/imagenet/val_map.txt
+mlperf_conf_path : /root/CM/repos/local/cache/d1b021ecc6ee4dcd/inference/mlperf.conf
+offline_expected_qps : 0.0
+precision : int8
+preprocessed_data_dir : /root/CM/repos/local/cache/33b43f4d63904585/preprocessed_data
+run_infer_on_copy_streams : False
+scenario : Scenario.Offline
+system : SystemConfiguration(host_cpu_conf=CPUConfiguration(layout={CPU(name='12th Gen Intel(R) Core(TM) i7-12650H', architecture=<CPUArchitecture.x86_64: AliasedName(name='x86_64', aliases=(), patterns=())>, core_count=10, threads_per_core=1): 1}), host_mem_conf=MemoryConfiguration(host_memory_capacity=Memory(quantity=16.062956, byte_suffix=<ByteSuffix.GB: (1000, 3)>, _num_bytes=16062956000), comparison_tolerance=0.05), accelerator_conf=AcceleratorConfiguration(layout=defaultdict(<class 'int'>, {GPU(name='NVIDIA GeForce RTX 3050 Laptop GPU', accelerator_type=<AcceleratorType.Discrete: AliasedName(name='Discrete', aliases=(), patterns=())>, vram=Memory(quantity=4.0, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=4294967296), max_power_limit=45.0, pci_id='0x25A210DE', compute_sm=86): 1})), numa_conf=None, system_id='ac0433862f68')
+tensor_path : build/preprocessed_data/imagenet/ResNet50/int8_linear
+test_mode : AccuracyOnly
+use_deque_limit : True
+use_graphs : False
+user_conf_path : /root/CM/repos/mlcommons@cm4mlops/script/generate-mlperf-inference-user-conf/tmp/31a4eed87f7844278247210f338eea90.conf
+system_id : ac0433862f68
+config_name : ac0433862f68_resnet50_Offline
+workload_setting : WorkloadSetting(HarnessType.LWIS, AccuracyTarget.k_99, PowerSetting.MaxP)
+optimization_level : plugin-enabled
+num_profiles : 4
+config_ver : lwis_k_99_MaxP
+accuracy_level : 99%
+inference_server : lwis
+skip_file_checks : False
+power_limit : None
+cpu_freq : None
+&&&& RUNNING Default_Harness # ./build/bin/harness_default
+[I] mlperf.conf path: /root/CM/repos/local/cache/d1b021ecc6ee4dcd/inference/mlperf.conf
+[I] user.conf path: /root/CM/repos/mlcommons@cm4mlops/script/generate-mlperf-inference-user-conf/tmp/31a4eed87f7844278247210f338eea90.conf
+Creating QSL.
+Finished Creating QSL.
+Setting up SUT.
+[I] [TRT] Loaded engine size: 42 MiB
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +6, GPU +10, now: CPU 112, GPU 193 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +2, GPU +10, now: CPU 114, GPU 203 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +19, now: CPU 0, GPU 19 (MiB)
+[I] Device:0.GPU: [0] ./build/engines/ac0433862f68/resnet50/Offline/resnet50-Offline-gpu-b64-int8.lwis_k_99_MaxP.plan has been successfully loaded.
+[E] [TRT] 3: [runtime.cpp::~Runtime::401] Error Code 3: API Usage Error (Parameter check failed at: runtime/rt/runtime.cpp::~Runtime::401, condition: mEngineCounter.use_count() == 1 Destroying a runtime before destroying deserialized engines created by the runtime leads to undefined behavior.)
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +10, now: CPU 72, GPU 195 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 72, GPU 203 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +100, now: CPU 0, GPU 119 (MiB)
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 95, GPU 331 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +10, now: CPU 95, GPU 341 (MiB)
+[I] [TRT] Could not set default profile 0 for execution context. Profile index must be set explicitly.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +99, now: CPU 0, GPU 218 (MiB)
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 117, GPU 471 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +1, GPU +12, now: CPU 118, GPU 483 (MiB)
+[I] [TRT] Could not set default profile 0 for execution context. Profile index must be set explicitly.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +100, now: CPU 0, GPU 318 (MiB)
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 140, GPU 613 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +1, GPU +10, now: CPU 141, GPU 623 (MiB)
+[I] [TRT] Could not set default profile 0 for execution context. Profile index must be set explicitly.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +99, now: CPU 0, GPU 417 (MiB)
+[I] Creating batcher thread: 0 EnableBatcherThreadPerDevice: false
+Finished setting up SUT.
+Starting warmup. Running for a minimum of 5 seconds.
+Finished warmup. Ran for 5.35122s.
+Starting running actual test.
+
+No warnings encountered during test.
+
+No errors encountered during test.
+Finished running actual test.
+Device Device:0.GPU processed:
+  1 batches of size 16
+  781 batches of size 64
+  Memcpy Calls: 0
+  PerSampleCudaMemcpy Calls: 0
+  BatchedCudaMemcpy Calls: 782
+&&&& PASSED Default_Harness # ./build/bin/harness_default
+[2024-12-11 07:12:24,064 run_harness.py:166 INFO] Result: Accuracy run detected.
+[2024-12-11 07:12:24,064 __init__.py:46 INFO] Running command: python3 /root/CM/repos/local/cache/10ef2dda136f4a86/repo/closed/NVIDIA/build/inference/vision/classification_and_detection/tools/accuracy-imagenet.py --mlperf-accuracy-file /root/CM/repos/local/cache/4dc132eafa554c94/valid_results/ac0433862f68-nvidia_original-gpu-tensorrt-vdefault-default_config/resnet50/offline/accuracy/mlperf_log_accuracy.json --imagenet-val-file data_maps/imagenet/val_map.txt --dtype int32
+accuracy=76.078%, good=38039, total=50000
+ 
+======================== Result summaries: ========================
+
