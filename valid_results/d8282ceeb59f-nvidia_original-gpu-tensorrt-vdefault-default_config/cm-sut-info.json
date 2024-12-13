@@ -1,0 +1,7 @@
+{
+  "system_name": "d8282ceeb59f",
+  "implementation": "nvidia",
+  "device": "gpu",
+  "framework": "TensorRT",
+  "run_config": "default_config"
+}
