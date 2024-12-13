@@ -1,0 +1,10 @@
+{
+  "os_version": "Linux-5.15.0-126-generic-x86_64-with-glibc2.29",
+  "cpu_version": "x86_64",
+  "python_version": "3.8.10 (default, Nov  7 2024, 13:10:47) \n[GCC 9.4.0]",
+  "cm_version": "3.5.1.1",
+  "os_version_sys": "ubuntu 20.04",
+  "system_name": "ca7cc3d4031a",
+  "cm_repo_name": "mlcommons@cm4mlops",
+  "cm_repo_git_hash": "5c26d813223a310a73dd844af98be626f66fc2f7"
+}

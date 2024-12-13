@@ -1,0 +1,7 @@
+{
+  "system_name": "ca7cc3d4031a",
+  "implementation": "nvidia",
+  "device": "gpu",
+  "framework": "TensorRT",
+  "run_config": "default_config"
+}

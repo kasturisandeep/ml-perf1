@@ -1,0 +1,119 @@
+[2024-12-13 04:09:53,759 main.py:229 INFO] Detected system ID: KnownSystem.ca7cc3d4031a
+[2024-12-13 04:09:55,072 generate_conf_files.py:107 INFO] Generated measurements/ entries for ca7cc3d4031a_TRT/bert-99/Offline
+[2024-12-13 04:09:55,072 __init__.py:46 INFO] Running command: ./build/bin/harness_bert --logfile_outdir="/root/CM/repos/local/cache/2a7b375b23944c6b/valid_results/ca7cc3d4031a-nvidia_original-gpu-tensorrt-vdefault-default_config/bert-99/offline/performance/run_1" --logfile_prefix="mlperf_log_" --performance_sample_count=10833 --test_mode="PerformanceOnly" --gpu_batch_size=256 --mlperf_conf_path="/root/CM/repos/local/cache/27861afae32943f0/inference/mlperf.conf" --tensor_path="build/preprocessed_data/squad_tokenized/input_ids.npy,build/preprocessed_data/squad_tokenized/segment_ids.npy,build/preprocessed_data/squad_tokenized/input_mask.npy" --use_graphs=false --user_conf_path="/root/CM/repos/mlcommons@cm4mlops/script/generate-mlperf-inference-user-conf/tmp/9e958f80102548e9b34eb05bad065b6a.conf" --gpu_inference_streams=2 --gpu_copy_streams=2 --gpu_engines="./build/engines/ca7cc3d4031a/bert/Offline/bert-Offline-gpu-int8_S_384_B_256_P_2_vs.custom_k_99_MaxP.plan" --scenario Offline --model bert
+[2024-12-13 04:09:55,072 __init__.py:53 INFO] Overriding Environment
+benchmark : Benchmark.BERT
+buffer_manager_thread_count : 0
+coalesced_tensor : True
+data_dir : /root/CM/repos/local/cache/d72e20a6308d4c96/data
+gpu_batch_size : 256
+gpu_copy_streams : 2
+gpu_inference_streams : 2
+input_dtype : int32
+input_format : linear
+log_dir : /root/CM/repos/local/cache/4c87958d0476411b/repo/closed/NVIDIA/build/logs/2024.12.13-04.09.52
+mlperf_conf_path : /root/CM/repos/local/cache/27861afae32943f0/inference/mlperf.conf
+offline_expected_qps : 0.0
+precision : int8
+preprocessed_data_dir : /root/CM/repos/local/cache/d72e20a6308d4c96/preprocessed_data
+scenario : Scenario.Offline
+system : SystemConfiguration(host_cpu_conf=CPUConfiguration(layout={CPU(name='11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz', architecture=<CPUArchitecture.x86_64: AliasedName(name='x86_64', aliases=(), patterns=())>, core_count=8, threads_per_core=2): 1}), host_mem_conf=MemoryConfiguration(host_memory_capacity=Memory(quantity=16.107516, byte_suffix=<ByteSuffix.GB: (1000, 3)>, _num_bytes=16107516000), comparison_tolerance=0.05), accelerator_conf=AcceleratorConfiguration(layout=defaultdict(<class 'int'>, {GPU(name='NVIDIA GeForce RTX 3060 Laptop GPU', accelerator_type=<AcceleratorType.Discrete: AliasedName(name='Discrete', aliases=(), patterns=())>, vram=Memory(quantity=6.0, byte_suffix=<ByteSuffix.GiB: (1024, 3)>, _num_bytes=6442450944), max_power_limit=85.0, pci_id='0x252010DE', compute_sm=86): 1})), numa_conf=None, system_id='ca7cc3d4031a')
+tensor_path : build/preprocessed_data/squad_tokenized/input_ids.npy,build/preprocessed_data/squad_tokenized/segment_ids.npy,build/preprocessed_data/squad_tokenized/input_mask.npy
+test_mode : PerformanceOnly
+use_graphs : False
+user_conf_path : /root/CM/repos/mlcommons@cm4mlops/script/generate-mlperf-inference-user-conf/tmp/9e958f80102548e9b34eb05bad065b6a.conf
+system_id : ca7cc3d4031a
+config_name : ca7cc3d4031a_bert_Offline
+workload_setting : WorkloadSetting(HarnessType.Custom, AccuracyTarget.k_99, PowerSetting.MaxP)
+optimization_level : plugin-enabled
+num_profiles : 2
+config_ver : custom_k_99_MaxP
+accuracy_level : 99%
+inference_server : custom
+skip_file_checks : True
+power_limit : None
+cpu_freq : None
+&&&& RUNNING BERT_HARNESS # ./build/bin/harness_bert
+I1213 04:09:55.167189 14018 main_bert.cc:163] Found 1 GPUs
+I1213 04:09:55.355813 14018 bert_server.cc:147] Engine Path: ./build/engines/ca7cc3d4031a/bert/Offline/bert-Offline-gpu-int8_S_384_B_256_P_2_vs.custom_k_99_MaxP.plan
+[I] [TRT] Loaded engine size: 414 MiB
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +6, GPU +8, now: CPU 578, GPU 673 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +2, GPU +10, now: CPU 580, GPU 683 (MiB)
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +290, now: CPU 0, GPU 290 (MiB)
+I1213 04:09:56.083180 14018 bert_server.cc:208] Engines Creation Completed
+I1213 04:09:56.118744 14018 bert_core_vs.cc:385] Engine - Device Memory requirements: 704644608
+I1213 04:09:56.118773 14018 bert_core_vs.cc:393] Engine - Number of Optimization Profiles: 2
+I1213 04:09:56.118788 14018 bert_core_vs.cc:415] Engine - Profile 0 maxDims 98304 Bmax=256 Smax=384
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 166, GPU 1349 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +8, now: CPU 166, GPU 1357 (MiB)
+I1213 04:09:56.228632 14018 bert_core_vs.cc:426] Setting Opt.Prof. to 0
+I1213 04:09:56.228698 14018 bert_core_vs.cc:444] Context creation complete. Max supported batchSize: 256
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +1, GPU +0, now: CPU 1, GPU 290 (MiB)
+I1213 04:09:56.229951 14018 bert_core_vs.cc:476] Setup complete
+I1213 04:09:56.230172 14018 bert_core_vs.cc:385] Engine - Device Memory requirements: 704644608
+I1213 04:09:56.230180 14018 bert_core_vs.cc:393] Engine - Number of Optimization Profiles: 2
+I1213 04:09:56.230186 14018 bert_core_vs.cc:415] Engine - Profile 1 maxDims 98304 Bmax=256 Smax=384
+[I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +8, now: CPU 289, GPU 2163 (MiB)
+[I] [TRT] [MemUsageChange] Init cuDNN: CPU +1, GPU +10, now: CPU 290, GPU 2173 (MiB)
+I1213 04:09:56.336356 14018 bert_core_vs.cc:426] Setting Opt.Prof. to 1
+[I] [TRT] Could not set default profile 0 for execution context. Profile index must be set explicitly.
+[I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +0, now: CPU 1, GPU 290 (MiB)
+I1213 04:09:56.337052 14018 bert_core_vs.cc:444] Context creation complete. Max supported batchSize: 256
+I1213 04:09:56.338430 14018 bert_core_vs.cc:476] Setup complete
+I1213 04:09:58.297765 14018 main_bert.cc:184] Starting running actual test.
+I1213 04:22:21.365855 14018 main_bert.cc:190] Finished running actual test.
+================================================
+MLPerf Results Summary
+================================================
+SUT name : BERT SERVER
+Scenario : Offline
+Mode     : PerformanceOnly
+Samples per second: 399.908
+Result is : VALID
+  Min duration satisfied : Yes
+  Min queries satisfied : Yes
+  Early stopping satisfied: Yes
+
+================================================
+Additional Stats
+================================================
+Min latency (ns)                : 2477915790
+Max latency (ns)                : 742881412523
+Mean latency (ns)               : 443523115119
+50.00 percentile latency (ns)   : 469608609315
+90.00 percentile latency (ns)   : 708504893129
+95.00 percentile latency (ns)   : 729025808474
+97.00 percentile latency (ns)   : 735445702768
+99.00 percentile latency (ns)   : 741031491634
+99.90 percentile latency (ns)   : 742802944504
+
+================================================
+Test Parameters Used
+================================================
+samples_per_query : 297084
+target_qps : 450.128
+target_latency (ns): 0
+max_async_queries : 1
+min_duration (ms): 600000
+max_duration (ms): 0
+min_query_count : 1
+max_query_count : 0
+qsl_rng_seed : 3066443479025735752
+sample_index_rng_seed : 10688027786191513374
+schedule_rng_seed : 14962580496156340209
+accuracy_log_rng_seed : 0
+accuracy_log_probability : 0
+accuracy_log_sampling_target : 0
+print_timestamps : 0
+performance_issue_unique : 0
+performance_issue_same : 0
+performance_issue_same_index : 0
+performance_sample_count : 10833
+
+No warnings encountered during test.
+
+No errors encountered during test.
+[2024-12-13 04:22:21,549 run_harness.py:166 INFO] Result: result_samples_per_second: 399.908, Result is VALID
+ 
+======================== Result summaries: ========================
+
